@@ -56,7 +56,7 @@ class OXOTask(Task):
 	def get_num_actions(self):
 		return OXOTask.state_shape[0] ** 2
 
-	def get_valid_actions(self, s, agent):
+	def get_valid_actions(self, s, agent=None):
 		return [int(x == 0) for x in s.ravel()]
 
 	def has_valid_actions(self, s, agent):
